@@ -127,13 +127,13 @@
             $.ajaxSetup({ async: true });
 
             if (response.status === 400) {
-                // No record found
+              
                 $("#shipmentNo").prop("disabled", false);
                 enableFields();
                 $("#saveBtn, #resetBtn").prop("disabled", false);
                 $("#description").focus();
             } else if (response.status === 200) {
-                // Existing record found
+                
                 const data = JSON.parse(response.data);
                 const record = data.record;
 
